@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Visualizador 3D Simple</title>
-  <style>
-    body { margin: 0; overflow: hidden; background: #111; }
-    canvas { display: block; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visualizador 3D - EXAMPLE</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Three.js -->
+  <div class="page">
+    <header class="topbar">
+      <h1 class="brand">EXAMPLE Viewer</h1>
+      <p class="subtitle">Rotación automática • Simple y elegante</p>
+    </header>
+
+    <main class="center">
+      <div class="card">
+        <div id="viewer" class="viewer">
+          <!-- canvas de three.js se insertará aquí -->
+          <div id="loader" class="loader">
+            <div class="spinner"></div>
+            <div class="loader-text">Cargando modelo…</div>
+          </div>
+        </div>
+        <figcaption class="caption">Modelo: <strong>EXAMPLE.glb</strong></figcaption>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <small>Hecho con ☕️ y WebGL • Sube <code>EXAMPLE.glb</code> en la misma carpeta</small>
+    </footer>
+  </div>
+
+  <!-- Three.js desde CDN -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/js/loaders/GLTFLoader.js"></script>
   <script src="script.js"></script>
